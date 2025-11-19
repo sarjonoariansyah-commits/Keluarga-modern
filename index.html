@@ -1,59 +1,114 @@
-<!--
-Simple SEO-friendly Adsense Blog Template
-File: Blog-Adsense-Template.html
-How to use:
-1. Replace the ADSENSE_CLIENT_ID placeholder with your AdSense <script> code where indicated.
-2. Replace site metadata (title, description, author) below.
-3. Add posts in the `posts` array inside the <script id="posts-data"> section or convert to static HTML files.
-4. Upload to any static host (Netlify, Vercel, GitHub Pages) or your own server.
-5. For best results, set up an XML sitemap and robots.txt on your host.
-
-Notes on monetization:
-- Place your real AdSense code in the indicated <!-- ADSENSE --> slots.
-- Follow Google AdSense policies (no incentivized clicks, don't place too many ads, content quality, privacy policy page).
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Keluarga Modern — Tips, Tutorial & Artikel</title>
-  <meta name="description" content="Blog seputar parenting, keluarga modern, hubungan orang tua & anak, serta tips kehidupan rumah tangga.">
-  <meta name="author" content="Nama Kamu">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keluarga Modern</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Keluarga Modern — Tips, Tutorial & Artikel">
-  <meta property="og:description" content="Blog seputar parenting, keluarga modern, hubungan orang tua & anak, serta tips kehidupan rumah tangga.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com">
-  <meta property="og:image" content="https://example.com/og-image.jpg">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Twitter card -->
-  <meta name="twitter:card" content="summary_large_image">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            scroll-behavior: smooth;
+        }
 
-  <!-- Schema.org JSON-LD (Organization + WebSite) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Keluarga Modern",
-    "url": "https://example.com",
-    "description": "Blog seputar parenting, keluarga modern, hubungan orang tua & anak, serta tips kehidupan rumah tangga.",
-    "publisher": {
-      "@type": "Person",
-      "name": "Nama Kamu"
-    }
-  }
-  </script>
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
 
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-  <style>
-  /* styles omitted due to length */
-  </style>
+        p.subtitle {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeSlide 1.2s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeSlide {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
+
 <body>
-<!-- body omitted -->
+
+    <header>
+        <h1>Keluarga Modern</h1>
+        <p class="subtitle">Situs informasi keluarga masa kini, pintar & melek teknologi.</p>
+    </header>
+
+    <section>
+        <div class="card">
+            <h2>Tentang Kami</h2>
+            <p>
+                Kami menyediakan informasi dan panduan keluarga modern:
+                edukasi, teknologi, finansial, dan gaya hidup yang relevan
+                untuk kebutuhan keluarga masa kini.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Tujuan Website</h2>
+            <ul>
+                <li>Membantu keluarga Indonesia menjadi lebih pintar digital</li>
+                <li>Memberikan panduan parenting modern</li>
+                <li>Tips manajemen keuangan keluarga</li>
+                <li>Inspirasi gaya hidup sehat & produktif</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Kontak</h2>
+            <p>Email: <b>keluargamodern@support.com</b></p>
+        </div>
+    </section>
+
+    <div class="footer">
+        © 2025 Keluarga Modern — Dibangun dengan cinta ✨
+    </div>
+
 </body>
 </html>
